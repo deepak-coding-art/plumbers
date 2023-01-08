@@ -1,0 +1,75 @@
+:root {
+  --white-text: #70f4fd;
+  --hole-color: #002638;
+  --hole-border: #000000;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: var(--white-text);
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  z-index: -1;
+}
+
+.title {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.pipe-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110%;
+}
+
+.pipe {
+  width: 100%;
+}
+
+.holes {
+  position: absolute;
+  background-color: var(--hole-color);
+  border: solid 1px var(--hole-border);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.bandage {
+  position: absolute;
+}
+
+.water {
+  position: absolute;
+  width: 1500%;
+  transform: translate(-42%, -100%);
+}
