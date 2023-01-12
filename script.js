@@ -85,7 +85,7 @@ function update() {
       hole.innerHTML = "";
       const seal = document.createElement("img");
       seal.setAttribute("class", `seal seal-number-${index}`);
-      seal.setAttribute("src", "./assets/seal.png");
+      seal.setAttribute("src", "./assets/seal-img.png");
       seal.style.width = `400%`;
       seal.style.transform = `translate(-50%, -50%)`;
       hole.appendChild(seal);
