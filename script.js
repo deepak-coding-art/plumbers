@@ -38,16 +38,16 @@ function createHole() {
     const hole = document.createElement("div");
     hole.setAttribute("class", `holes hole-number-${holes.length}`);
     if (holes.length === 0) {
-      hole.style.left = `10%`;
-      hole.style.top = `10%`;
+      hole.style.left = `5%`;
+      hole.style.top = `23%`;
     } else if (holes.length === 1) {
-      hole.style.left = `30%`;
-      hole.style.top = `85%`;
+      hole.style.left = `5%`;
+      hole.style.top = `81%`;
     } else if (holes.length === 2) {
-      hole.style.left = `60%`;
-      hole.style.top = `13%`;
+      hole.style.left = `94%`;
+      hole.style.top = `40%`;
     }
-    hole.style.width = `0.2%`;
+    hole.style.width = `1.5%`;
     hole.addEventListener("click", (e) => {
       const number = parseInt(e.target.className.split("-").at(-1));
       lastClick = number;
@@ -83,26 +83,26 @@ function update() {
   holes.forEach((hole, index) => {
     if (!holesStatus[index]) {
       hole.innerHTML = "";
-      const bandage = document.createElement("img");
-      bandage.setAttribute("class", `bandage bandage-number-${index}`);
-      bandage.setAttribute("src", "./assets/bandage.png");
-      bandage.style.width = `500%`;
-      bandage.style.transform = `translate(-50%, -50%)`;
-      hole.appendChild(bandage);
+      const seal = document.createElement("img");
+      seal.setAttribute("class", `seal seal-number-${index}`);
+      seal.setAttribute("src", "./assets/seal.png");
+      seal.style.width = `400%`;
+      seal.style.transform = `translate(-50%, -50%)`;
+      hole.appendChild(seal);
       holesStatus[index] = false;
     } else {
       hole.innerHTML = "";
-      const water = document.createElement("img");
-      water.setAttribute("class", "water");
-      water.setAttribute("src", "./assets/water.png");
+      const spray = document.createElement("img");
+      spray.setAttribute("class", `spray spray-${index}`);
+      spray.setAttribute("src", "./assets/spray.png");
 
-      hole.appendChild(water);
+      hole.appendChild(spray);
     }
   });
 }
 
 window.addEventListener("load", () => {
-  createBg();
+  // createBg();
   createPipe();
   createHole();
   update();
